@@ -1,0 +1,52 @@
+/* Base theme variables */
+:root {
+  --color-primary: theme('colors.electric.DEFAULT');
+  --color-background: theme('colors.space.900');
+  --color-surface: theme('colors.space.800');
+  --color-text: theme('colors.cyber.white');
+  --shadow-neon: theme('boxShadow.neon');
+}
+
+/* Theme-specific variables */
+[data-theme='solar'] {
+  --color-primary: #FF6B35;
+  --color-background: #FFFAF7;
+  --color-surface: #FFFFFF;
+  --color-text: #2A2A2A;
+  --shadow-neon: 0 0 15px rgba(255, 107, 53, 0.5);
+}
+
+[data-theme='midnight'] {
+  --color-primary: #00f0ff;
+  --color-background: #0a0b1e;
+  --color-surface: #141537;
+  --color-text: #f0f7ff;
+  --shadow-neon: 0 0 15px rgba(0, 240, 255, 0.5);
+}
+
+[data-theme='ocean'] {
+  --color-primary: #0288D1;
+  --color-background: #F5F9FC;
+  --color-surface: #FFFFFF;
+  --color-text: #1A237E;
+  --shadow-neon: 0 0 15px rgba(2, 136, 209, 0.5);
+}
+
+[data-theme='forest'] {
+  --color-primary: #2E7D32;
+  --color-background: #F9FBF9;
+  --color-surface: #FFFFFF;
+  --color-text: #1B5E20;
+  --shadow-neon: 0 0 15px rgba(46, 125, 50, 0.5);
+}
+
+/* Apply theme transitions */
+body {
+  @apply transition-colors duration-300;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+.theme-transition {
+  transition: all 300ms ease-in-out;
+}

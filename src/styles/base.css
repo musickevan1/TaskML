@@ -1,0 +1,33 @@
+@layer base {
+  body {
+    @apply bg-space-900 text-cyber-white antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold text-cyber-white;
+  }
+}
+
+@layer components {
+  .cyber-button {
+    @apply px-4 py-2 bg-electric-500/10 border border-electric-500/30
+           text-electric-500 rounded-md font-medium
+           hover:bg-electric-500/20 hover:border-electric-500/50
+           focus:outline-none focus:ring-2 focus:ring-electric-500/50
+           transition-all duration-300;
+  }
+
+  .nav-link {
+    @apply flex items-center px-3 py-2 rounded-md text-sm font-medium
+           transition-colors duration-150 ease-in-out
+           focus:outline-none focus:ring-2 focus:ring-electric-500;
+  }
+
+  .nav-link-active {
+    @apply bg-electric-500/10 text-electric-500;
+  }
+
+  .nav-link-inactive {
+    @apply text-cyber-white/60 hover:bg-space-800 hover:text-cyber-white;
+  }
+}
